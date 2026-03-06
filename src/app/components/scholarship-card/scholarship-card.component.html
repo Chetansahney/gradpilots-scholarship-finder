@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-title-row">
+      <h3 class="card-title">{{ scholarship.name }}</h3>
+      <span class="flag">{{ scholarship.countryFlag }}</span>
+    </div>
+    <span class="cart-icon" title="Save">🛒</span>
+  </div>
+
+  <div class="card-body">
+    <div class="card-info">
+      <span class="info-icon">✅</span>
+      <span class="info-label">{{ formatAmount(scholarship) }}</span>
+    </div>
+    <div class="card-info">
+      <span class="info-icon">📅</span>
+      <span class="info-label">Deadline: {{ scholarship.deadline }}</span>
+    </div>
+    <div class="card-tags">
+      <span class="tag tag-stream">{{ scholarship.stream }}</span>
+      <span class="tag tag-level">{{ scholarship.level }}</span>
+      <span class="tag tag-country">{{ scholarship.country }}</span>
+    </div>
+    <p class="card-description">{{ scholarship.description }}</p>
+  </div>
+
+  <div class="card-footer">
+    <button class="btn-view-details" (click)="onViewDetails()">
+      View Details &gt;
+    </button>
+  </div>
+</div>
