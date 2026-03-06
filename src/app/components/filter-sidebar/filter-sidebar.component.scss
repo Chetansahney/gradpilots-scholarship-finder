@@ -1,0 +1,133 @@
+.sidebar {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e3eaf3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-header {
+  margin-bottom: 8px;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1565c0;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.filter-section {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f4f8;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.filter-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.filter-icon {
+  font-size: 1rem;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #555;
+  transition: color 0.2s;
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #1565c0;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: #1565c0;
+  }
+}
+
+.deadline-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d0d9e8;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #333;
+  background: #f8faff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: #1565c0;
+  }
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.btn-reset {
+  flex: 1;
+  padding: 9px 12px;
+  background: #fff;
+  color: #1565c0;
+  border: 1.5px solid #1565c0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: #e3f2fd;
+  }
+}
+
+.btn-apply {
+  flex: 1;
+  padding: 9px 12px;
+  background: #1565c0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #1976d2;
+  }
+}

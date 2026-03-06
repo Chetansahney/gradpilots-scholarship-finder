@@ -1,0 +1,67 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>FILTERS</h2>
+  </div>
+
+  <!-- Country Filter -->
+  <div class="filter-section">
+    <div class="filter-title">
+      <span class="filter-icon">🌐</span>
+      <span>Country</span>
+    </div>
+    <div class="filter-options">
+      <label *ngFor="let country of countries" class="checkbox-label">
+        <input type="checkbox" [(ngModel)]="selectedCountries[country]" />
+        <span>{{ country }}</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Stream Filter -->
+  <div class="filter-section">
+    <div class="filter-title">
+      <span class="filter-icon">🎓</span>
+      <span>Stream</span>
+    </div>
+    <div class="filter-options">
+      <label *ngFor="let stream of streams" class="checkbox-label">
+        <input type="checkbox" [(ngModel)]="selectedStreams[stream]" />
+        <span>{{ stream }}</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Level Filter -->
+  <div class="filter-section">
+    <div class="filter-title">
+      <span class="filter-icon">🖥️</span>
+      <span>Level</span>
+    </div>
+    <div class="filter-options">
+      <label *ngFor="let level of levels" class="checkbox-label">
+        <input type="checkbox" [(ngModel)]="selectedLevels[level]" />
+        <span>{{ level }}</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Deadline Filter -->
+  <div class="filter-section">
+    <div class="filter-title">
+      <span class="filter-icon">📅</span>
+      <span>Deadline</span>
+    </div>
+    <div class="filter-options">
+      <select [(ngModel)]="selectedDeadline" class="deadline-select">
+        <option value="">Select Month</option>
+        <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="filter-actions">
+    <button class="btn-reset" (click)="onReset()">Reset Filters</button>
+    <button class="btn-apply" (click)="onApply()">Apply</button>
+  </div>
+</div>

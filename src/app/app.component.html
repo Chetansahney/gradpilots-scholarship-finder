@@ -1,0 +1,48 @@
+<div class="app-wrapper">
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <h1 class="header-title">
+        <span class="brand-name">GradPilots</span> Scholarship Finder
+      </h1>
+      <p class="header-subtitle">Find the perfect scholarship for your academic journey</p>
+    </div>
+  </header>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-box">
+        <span class="stat-icon">🎓</span>
+        <div class="stat-info">
+          <span class="stat-number">{{ stats.total }}</span>
+          <span class="stat-label">Scholarships</span>
+        </div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-icon">✅</span>
+        <div class="stat-info">
+          <span class="stat-number">{{ stats.fullFunding }}</span>
+          <span class="stat-label">Full Funding</span>
+        </div>
+      </div>
+      <div class="stat-box">
+        <span class="stat-icon">📅</span>
+        <div class="stat-info">
+          <span class="stat-number">{{ stats.deadlinesThisQuarter }}</span>
+          <span class="stat-label">Deadlines This Quarter</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <div class="sidebar-column">
+      <app-filter-sidebar (filtersApplied)="onFiltersApplied($event)"></app-filter-sidebar>
+    </div>
+    <div class="list-column">
+      <app-scholarship-list [filters]="currentFilters"></app-scholarship-list>
+    </div>
+  </main>
+</div>
